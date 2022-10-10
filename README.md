@@ -1,1 +1,23 @@
-![Screenshot_20221011_002218.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f041c4a3-ad10-40f4-b23f-47bff7f1ed1f/Screenshot_20221011_002218.png)
+## Used in This Project
+
+---
+
+- Navigation
+- Recycler View
+- Card View
+- Gson
+- Grid Layout
+
+## Take Notes
+
+---
+
+### **1. Recylerview, Jetpack Navigation Component, Fragment kullanarak bir app yapılması bekleniyor.**
+
+### **2. Bir mock datanınz (kendiniz oluşturabilir veya internetten hazır datayı locale alabilirsiniz, retrofit kullanmıza gerek yok şimdilik)**
+
+### **3. Tasarım için dribble.com veya figma community tarafından destek alabilirsiniz orada hazır tasarımlar var direct alabilirsiniz.**
+
+### **4. Bir MainActivity olacak, bu mainActivity’de sadece navigation olacak.**
+
+### **5. 2 veya istğine göre daha fazla fragment kullanabilirsiniz. Ana şart olarak bir tane listeleme fragmenti ve detay fragmenti gerekiyor. Burada recylerview kullanarak listeleme ve detay ekranına veri göndermenizi bekliyorum.**
