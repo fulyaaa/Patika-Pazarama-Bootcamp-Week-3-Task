@@ -2,7 +2,7 @@
 
 ![Screenshot_20221011_002218](https://user-images.githubusercontent.com/101550371/194956222-91a9db6d-99a1-4333-9cf7-60a877c0e346.png)
 ![Screenshot_20221011_002236](https://user-images.githubusercontent.com/101550371/194956236-d53da3dd-f6bb-49cc-a552-20301e6545ce.png)
-![Screenshot_20221011_002245](https://user-images.githubusercontent.com/101550371/194956243-2dd14b92-458b-4e5a-a781-e1899137ac60.png)
+![Screenshot_20221011_012332](https://user-images.githubusercontent.com/101550371/194961203-1b4c2cb0-7e10-46eb-adb8-fb5d403169fa.png)
 
 
 ## Used in This Project
