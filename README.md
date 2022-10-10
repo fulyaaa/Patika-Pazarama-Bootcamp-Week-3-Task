@@ -1,16 +1,14 @@
 ## Used in This Project
 
----
-
 - Navigation
 - Recycler View
 - Card View
 - Gson
 - Grid Layout
 
+
 ## Take Notes
 
----
 
 ### **1. Recylerview, Jetpack Navigation Component, Fragment kullanarak bir app yapılması bekleniyor.**
 
