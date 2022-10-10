@@ -1,8 +1,8 @@
 # Week 3 Assignment
 
-![Screenshot_20221011_002218](https://user-images.githubusercontent.com/101550371/194956095-1a1697d1-b4b1-442d-bcf0-964568a9aadf.png)
-![Screenshot_20221011_002236](https://user-images.githubusercontent.com/101550371/194956104-f404feb4-7f93-4911-b1f0-38b216d1c9a3.png)
-![Screenshot_20221011_002245](https://user-images.githubusercontent.com/101550371/194956109-0717d84f-1849-4b2b-8c1d-b7bda514bc19.png)
+![Screenshot_20221011_002218](https://user-images.githubusercontent.com/101550371/194956222-91a9db6d-99a1-4333-9cf7-60a877c0e346.png)
+![Screenshot_20221011_002236](https://user-images.githubusercontent.com/101550371/194956236-d53da3dd-f6bb-49cc-a552-20301e6545ce.png)
+![Screenshot_20221011_002245](https://user-images.githubusercontent.com/101550371/194956243-2dd14b92-458b-4e5a-a781-e1899137ac60.png)
 
 
 ## Used in This Project
