@@ -38,7 +38,7 @@ class FirstFragment : Fragment(){
             Navigation.findNavController(drySkinButton).navigate(R.id.action_firstFragment_to_secondFragment)
         }
         combinationSkinButton.setOnClickListener {
-            Navigation.findNavController(combinationSkinButton).navigate(R.id.action_firstFragment_to_secondFragment)
+            Navigation.findNavController(combinationSkinButton).navigate(R.id.action_firstFragment_to_secondFragment2)
         }
         oilySkinButton.setOnClickListener {
             Navigation.findNavController(oilySkinButton).navigate(R.id.action_firstFragment_to_secondFragment)

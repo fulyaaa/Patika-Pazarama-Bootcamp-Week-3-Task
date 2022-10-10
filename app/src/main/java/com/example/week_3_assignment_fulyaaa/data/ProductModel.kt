@@ -11,6 +11,8 @@ import kotlinx.android.parcel.Parcelize
 data class ProductModel(
     val image: Int,
     val name:String,
+    val quantity: String,
+    val price: String,
 ):Parcelable{
     fun toJson(): String {
         return Gson().toJson(this)
@@ -25,43 +27,64 @@ data class ProductModel(
 val mockProductData = mutableListOf<ProductModel>(
     ProductModel(
         R.drawable.opened_pink_cosmetic_serum,
-        "Sii Peeling Serum"
+        "Sii Peeling Serum",
+        "300 ml",
+        "18,00 $"
+
     ),
     ProductModel(
         R.drawable.pink_cosmetic_cream,
-    "Met Night Cream"
+    "Met Night Cream",
+        "80 ml",
+        "15,30 $"
     ),
     ProductModel(
         R.drawable.hand_cream_blue,
-        "Freshly Face Wash"
+        "Freshly Face Wash",
+        "120 ml",
+        "10,00 $"
     ),
     ProductModel(
         R.drawable.blue_soap,
-        "Body Shoap"
+        "Body Shoap",
+        "250 ml",
+        "18,00 $"
     ),
     ProductModel(
         R.drawable.opened_pink_cosmetic_serum,
-        "Sii Peeling Serum"
+        "Sii Peeling Serum",
+        "300 ml",
+        "18,00 $"
     ),
     ProductModel(
         R.drawable.pink_cosmetic_cream,
-        "Met Night Cream"
+        "Met Night Cream",
+        "80 ml",
+        "15,30 $"
     ),
     ProductModel(
         R.drawable.hand_cream_blue,
-        "Freshly Face Wash"
+        "Freshly Face Wash",
+        "120 ml",
+        "10,00 $"
     ),
     ProductModel(
         R.drawable.blue_soap,
-        "Body Shoap"
+        "Body Shoap",
+        "250 ml",
+        "18,00 $"
     ),
     ProductModel(
         R.drawable.opened_pink_cosmetic_serum,
-        "Sii Peeling Cream"
+        "Sii Peeling Cream",
+        "300 ml",
+        "18,00 $"
     ),
     ProductModel(
         R.drawable.pink_cosmetic_cream,
-        "Met Night Cream"
+        "Met Night Cream",
+        "80 ml",
+        "15,30 $"
     )
 
 

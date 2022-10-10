@@ -14,6 +14,8 @@ class ThirdFragment : Fragment() {
 
     private lateinit var productName: TextView
     private lateinit var productImage: ImageView
+    private lateinit var productQuantity : TextView
+    private lateinit var productPrice : TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +31,8 @@ class ThirdFragment : Fragment() {
     private fun setupViews(view: View) {
         productName = view.findViewById(R.id.productName)
         productImage = view.findViewById(R.id.productImage)
+        productQuantity = view.findViewById(R.id.productQuantity)
+        productPrice = view.findViewById(R.id.productPrice)
 
         arguments?.let {
             val productData = it.getString("productModel")
@@ -38,6 +42,8 @@ class ThirdFragment : Fragment() {
 
                 productImage.setImageResource(product.image)
                 productName.text = product.name
+                productQuantity.text = product.quantity
+                productPrice.text = product.price
             }
         }
     }
