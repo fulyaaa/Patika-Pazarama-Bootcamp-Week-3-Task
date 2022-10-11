@@ -16,3 +16,4 @@
 4. Bir MainActivity olacak, bu mainActivity’de sadece navigation olacak.
 5. 2 veya istğine göre daha fazla fragment kullanabilirsiniz. Ana şart olarak bir tane listeleme fragmenti ve detay fragmenti gerekiyor. Burada recylerview kullanarak listeleme ve detay ekranına veri göndermenizi bekliyorum.
  
+ 
