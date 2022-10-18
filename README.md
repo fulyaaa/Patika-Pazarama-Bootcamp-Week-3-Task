@@ -7,6 +7,8 @@
 - Navigation
 - RecyclerView
 - CardView
+- View Binding
+- SafeArgs
 - Gson
 
 ## Take Notes
