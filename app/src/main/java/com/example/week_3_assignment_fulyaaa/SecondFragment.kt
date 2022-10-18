@@ -7,44 +7,65 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.example.week_3_assignment_fulyaaa.data.ProductModel
-import com.example.week_3_assignment_fulyaaa.data.mockProductData
+import com.example.week_3_assignment_fulyaaa.data.*
+import com.example.week_3_assignment_fulyaaa.databinding.FragmentSecondBinding
 
 
 class SecondFragment : Fragment(), ProductListener {
-
-    private lateinit var navController: NavController
+    private var _binding: FragmentSecondBinding? = null
+    private val binding get() = _binding!!
     private lateinit var rvProductList: RecyclerView
+    private val args by navArgs<SecondFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_second, container, false)
-        return view
+        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        navController = findNavController()
-        rvProductList = view.findViewById(R.id.rvProductList)
+        rvProductList = binding.rvProductList
         setupAdapter()
     }
 
-    private fun setupAdapter(){
-        rvProductList.adapter = ProductAdapter(mockProductData, this@SecondFragment)
-        rvProductList.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+    private fun setupAdapter() {
+            val product = args.product
+
+            if (product == "dry") {
+                rvProductList.adapter = ProductAdapter(mockProductDataDry, this@SecondFragment)
+            } else if (product == "combination") {
+                rvProductList.adapter =
+                    ProductAdapter(mockProductDataCombination, this@SecondFragment)
+            } else {
+                rvProductList.adapter = ProductAdapter(mockProductDataOily, this@SecondFragment)
+            }
+
+
+        rvProductList.layoutManager =
+            StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+
     }
 
     override fun onClicked(product: ProductModel) {
-        navController.navigate(R.id.action_secondFragment_to_thirdFragment, Bundle().apply {
-            putString("productModel", product.toJson())
-        })
+
+        val action =
+            SecondFragmentDirections.actionSecondFragmentToThirdFragment(
+                product
+            )
+        findNavController().navigate(action)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 
 }

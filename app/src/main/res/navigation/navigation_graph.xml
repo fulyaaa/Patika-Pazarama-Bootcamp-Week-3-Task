@@ -13,12 +13,9 @@
         <action
             android:id="@+id/action_firstFragment_to_secondFragment"
             app:destination="@id/secondFragment" />
-        <action
-            android:id="@+id/action_firstFragment_to_secondFragment2"
-            app:destination="@id/secondFragment2" />
-        <action
-            android:id="@+id/action_firstFragment_to_secondFragment3"
-            app:destination="@id/secondFragment3" />
+        <argument
+            android:name="mainDetails"
+            app:argType="com.example.week_3_assignment_fulyaaa.data.ProductModel" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
@@ -31,28 +28,18 @@
         <action
             android:id="@+id/action_secondFragment_to_thirdFragment"
             app:destination="@id/thirdFragment" />
+        <argument
+            android:name="product"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
         android:name="com.example.week_3_assignment_fulyaaa.ThirdFragment"
         android:label="fragment_third"
-        tools:layout="@layout/fragment_third" />
-    <fragment
-        android:id="@+id/secondFragment2"
-        android:name="com.example.week_3_assignment_fulyaaa.SecondFragment2"
-        android:label="fragment_second2"
-        tools:layout="@layout/fragment_second2" >
-        <action
-            android:id="@+id/action_secondFragment2_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
+        tools:layout="@layout/fragment_third">
+    <argument
+        android:name="productDetails"
+        app:argType="com.example.week_3_assignment_fulyaaa.data.ProductModel" />
     </fragment>
-    <fragment
-        android:id="@+id/secondFragment3"
-        android:name="com.example.week_3_assignment_fulyaaa.SecondFragment3"
-        android:label="fragment_second3"
-        tools:layout="@layout/fragment_second3" >
-        <action
-            android:id="@+id/action_secondFragment3_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
-    </fragment>
+
 </navigation>

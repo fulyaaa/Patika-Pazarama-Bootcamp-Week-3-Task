@@ -7,13 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.fragment.app.viewModels
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import com.example.week_3_assignment_fulyaaa.databinding.FragmentFirstBinding
 
 
-class FirstFragment : Fragment(){
+class FirstFragment : Fragment() {
 
+    private var _binding : FragmentFirstBinding? = null
+    private val binding get() = _binding!!
     lateinit var drySkinButton: TextView
     lateinit var combinationSkinButton: TextView
     lateinit var oilySkinButton: TextView
@@ -21,29 +26,31 @@ class FirstFragment : Fragment(){
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_first, container, false)
-        drySkinButton = view.findViewById(R.id.drySkinButton)
-        combinationSkinButton = view.findViewById(R.id.combinationSkinButton)
-        oilySkinButton = view.findViewById(R.id.oilySkinButton)
+        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        drySkinButton = binding.drySkinButton
+        combinationSkinButton = binding.combinationSkinButton
+        oilySkinButton = binding.oilySkinButton
+        return binding.root
 
-        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
         drySkinButton.setOnClickListener {
-            Navigation.findNavController(drySkinButton).navigate(R.id.action_firstFragment_to_secondFragment)
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment("dry")
+            findNavController().navigate(action)
         }
         combinationSkinButton.setOnClickListener {
-            Navigation.findNavController(combinationSkinButton).navigate(R.id.action_firstFragment_to_secondFragment2)
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment("combination")
+            findNavController().navigate(action)
         }
         oilySkinButton.setOnClickListener {
-            Navigation.findNavController(oilySkinButton).navigate(R.id.action_firstFragment_to_secondFragment)
+            val action = FirstFragmentDirections.actionFirstFragmentToSecondFragment("oily")
+            findNavController().navigate(action)
         }
-
     }
-
 }
